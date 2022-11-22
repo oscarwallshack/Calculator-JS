@@ -14,28 +14,29 @@ body {
     width: 100%;
     color: #F4F4F4;
     overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: baseline;
 }
 
 .calculator {
-    height: 60vh;
-    min-width: 370px;
-    max-width: 370px;
-    background: #9696965b;
+
 }
 
 .calculator .display {
+    min-width: 370px;
+    max-width: 370px;
     min-height: 20%;
     max-height: min-content;
-    width: 100%;
     padding: 10px 10px 10px 10px;
     text-align: end;
-    background: linear-gradient(317deg, #3069b4, #254a7a, #390549);
-    -webkit-box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
-    -moz-box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
-    box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
+    background: #9b9b9b10;
 }
 
 .calculator .display .previousNumber {
@@ -49,7 +50,7 @@ body {
 
 }
 
-.calculator .panel {
+.panel {
     display: grid;
     justify-items: stretch;
     grid-template-columns: repeat(4, 96px);
@@ -58,11 +59,16 @@ body {
     row-gap: 3px;
 }
 
-.calculator .panel button {
-    height: 100px;
-    width: 100px;
+.panel button {
+    height: 70px;
+    width: 70px;
 }
 
-.calculator .panel .equals {
+.panel .equals {
     height: 160px;
+}
+
+.calculator-history{
+    height: 100%;
+    background: #3069b4;
 }
