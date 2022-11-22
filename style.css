@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(117deg, #3069b4, #254a7a, #390549);
+    min-height: 100vh;
+    width: 100%;
+    color: #F4F4F4;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 60vh;
+    min-width: 370px;
+    max-width: 370px;
+    background: #9696965b;
+}
+
+.calculator .display {
+    min-height: 20%;
+    max-height: min-content;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    text-align: end;
+    background: linear-gradient(317deg, #3069b4, #254a7a, #390549);
+    -webkit-box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
+    -moz-box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
+    box-shadow: 8px 0px 55px -17px rgba(39, 14, 70, 1);
+}
+
+.calculator .display .previousNumber {
+    font-size: 18px;
+}
+
+.calculator .display .currentNumber {
+    font-size: 20px;
+    text-align: end;
+    justify-content: end;
+
+}
+
+.calculator .panel {
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(4, 96px);
+    grid-template-rows: repeat(5, 96px);
+    column-gap: 4px;
+    row-gap: 3px;
+}
+
+.calculator .panel button {
+    height: 100px;
+    width: 100px;
+}
+
+.calculator .panel .equals {
+    height: 160px;
+}
