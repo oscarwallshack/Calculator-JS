@@ -19,19 +19,20 @@ body {
 
 main {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: baseline;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 .calculator {
-
+    height: 600px;
+    min-width: 370px;
+    max-width: 370px;
 }
 
 .calculator .display {
-    min-width: 370px;
-    max-width: 370px;
     min-height: 20%;
     max-height: min-content;
     padding: 10px 10px 10px 10px;
@@ -68,7 +69,8 @@ main {
     height: 160px;
 }
 
-.calculator-history{
-    height: 100%;
+.calculator-history {
+    height: 600px;
+    padding: 20px;
     background: #3069b4;
 }
