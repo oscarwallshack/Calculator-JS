@@ -23,7 +23,7 @@ const calculator = {
     },
 
     operate() {
-        if (currentNumber.innerHTML === '' && this.textContent === '-') {
+        if (currentNumber.innerHTML === '' || currentNumber.innerHTML === '-' && this.textContent === '-') {
             currentNumber.innerHTML = '-';
             return;
         } else if (currentNumber.innerHTML === '') {
