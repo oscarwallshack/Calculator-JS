@@ -30,11 +30,11 @@ function operate() {
 
     if (mathSign.innerHTML !== '') {
         showResult();
-    } else {
-        previousNumber.innerHTML = currentNumber.innerHTML;
-        mathSign.innerHTML = this.textContent;
-        currentNumber.innerHTML = ''
     }
+    previousNumber.innerHTML = currentNumber.innerHTML;
+    mathSign.innerHTML = this.textContent;
+    currentNumber.innerHTML = ''
+
 }
 
 function showResult() {
@@ -52,12 +52,14 @@ function showResult() {
     }
 
     addToHistory();
+    show();
+}
+
+function show() {
     clearHistoryButton.style.display = 'block';
     currentNumber.innerHTML = result;
     previousNumber.innerHTML = '';
     mathSign.innerHTML = '';
-
-
 }
 
 function clearScreen() {
@@ -78,9 +80,6 @@ function clearHistory() {
     historyUl.textContent = ''
     clearHistoryButton.style.display = 'none';
 }
-
-
-
 
 numbersButtons.forEach((button) => {
     button.addEventListener('click', displayNumbers)
